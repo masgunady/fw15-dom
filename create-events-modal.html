@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Event</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="./assets/css/styling.css" />
+  </head>
+  <body>
+    <nav class="flex justify-between items-center w-[100%] h-24 px-9 lg:px-14">
+      <div class="flex justify-start items-center gap-2 lg:gap-3.5">
+        <div>
+          <img src="./assets/img/icon-logo.svg" alt="" />
+        </div>
+        <div>
+          <a href="./index.html">
+            <p class="text-2xl font-semibold text-[#3366FF] tracking-[1px]">We<span class="text-[#FF3D71]">tick</span></p>
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <ul class="flex gap-5 lg:gap-12 text-sm text-[#373a42] font-semibold tracking-[1px]">
+          <li class="cursor-pointer"><a href="#">Home</a></li>
+          <li class="cursor-pointer"><a href="#">Create Event</a></li>
+          <li class="cursor-pointer"><a href="#">Location</a></li>
+        </ul>
+      </div>
+      <div class="hidden md:block">
+        <div class="flex justify-start items-center gap-[10px] lg:gap-[15px]">
+          <div class="inline-block rounded-full p-[2px] bg-gradient-to-tr from-[#3366FF] to-[#884DFF]">
+            <img class="w-12 h-12 border-4 border-white rounded-full" src="https://i.pravatar.cc/48" alt="nav-img-profile" />
+          </div>
+          <div class="text-sm text-[#373a42] font-semibold tracking-[1px] object-cover"><a href="#">John Tompson</a></div>
+        </div>
+      </div>
+      <div class="block md:hidden">
+        <div>
+          <button>
+            <i data-feather="align-justify"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="bg-[#F4F7FF] md:px-9 lg:px-16 xl:px-24 2xl:px-52 flex md:gap-3">
+      <aside class="hidden md:block my-12 md:w-64 xl:w-80">
+        <div class="flex gap-3.5 mb-14">
+          <div>
+            <div class="inline-block rounded-full p-[2px] bg-gradient-to-tr from-[#3366FF] to-[#884DFF]">
+              <img class="border-4 border-white rounded-full" src="https://i.pravatar.cc/48" alt="nav-img-profile" />
+            </div>
+          </div>
+          <div class="flex flex-col justify-center gap-2">
+            <div class="text-sm text-[#373a42] font-semibold tracking-[1px]">John Tompson</div>
+            <div class="text-xs text-[#373a42] tracking-[0.5px]">Entrepreneur, ID</div>
+          </div>
+        </div>
+        <div>
+          <ul>
+            <li class="mb-8 text-sm text-[#373a42] font-semibold tracking-[1px]">
+              <a class="flex items-center gap-6" href="#"> <i data-feather="user"></i>Profile </a>
+            </li>
+            <li>
+              <ul class="ml-7">
+                <li class="mb-8 text-sm text-[#373a42] font-semibold tracking-[1px]">
+                  <a class="flex items-center gap-6" href="#"> <i data-feather="credit-card"></i> Card </a>
+                </li>
+                <li class="mb-8 text-sm text-[#373a42] font-semibold tracking-[1px]">
+                  <a class="flex items-center gap-6" href="./edit-profile.html"> <i data-feather="edit-3"></i>Edit Profile </a>
+                </li>
+                <li class="mb-8 text-sm font-semibold text-[#373a42] tracking-[1px]">
+                  <a class="flex items-center gap-6" href="./change-pass.html"> <i data-feather="unlock"></i>Change Password </a>
+                </li>
+              </ul>
+            </li>
+            <li class="mb-8 text-sm font-semibold tracking-[1px] text-[#3366FF]">
+              <a class="flex items-center gap-6" href="./create-events.html"> <i data-feather="plus-circle"></i>Create Event</a>
+            </li>
+            <li class="mb-8 text-sm font-semibold tracking-[1px] text-[#373a42]">
+              <a class="flex items-center gap-6" href="./my-booking.html"> <i data-feather="list"></i>My Booking </a>
+            </li>
+            <li class="mb-8 text-sm text-[#373a42] font-semibold tracking-[1px]">
+              <a class="flex items-center gap-6" href="./my-wishlists.html"> <i data-feather="heart"></i>My Wishlist </a>
+            </li>
+            <li class="mb-8 text-sm text-[#373a42] font-semibold tracking-[1px]">
+              <a class="flex items-center gap-6" href="#"> <i data-feather="settings"></i>Setting </a>
+            </li>
+            <li class="mb-8 text-sm text-[#F03800] font-semibold tracking-[1px]">
+              <a class="flex items-center gap-6" href="./auth-login.html"> <i data-feather="log-out"></i>Logout </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="md:my-12 flex-1">
+        <div class="bg-white px-9 lg:px-12 py-9 lg:py-11 rounded-2xl md:min-h-[650px]">
+          <div class="flex flex-col gap-6 md:gap-0 md:flex-row md:items-center md:justify-between mb-7">
+            <div class="text-xl text-[#373a42] font-semibold tracking-[1px]">Create Event</div>
+            <div class="w-32 h-14 rounded-2xl bg-[#EAF1FF] flex justify-center items-center">
+              <button class="w-full h-full flex justify-center items-center gap-4 text-xs font-medium tracking-1px text-[#3366FF]"><i data-feather="plus-circle"></i>Create</button>
+            </div>
+          </div>
+          <div class="flex items-center justify-start gap-6 border-b-2 py-7">
+            <div>
+              <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
+                <div class="text-sm font-semibold text-[#FF8900]">15</div>
+                <div class="text-xs font-medium text-[#C1C5D0]">Wed</div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start text-[#373A42] gap-[5px]">
+              <div class="text-2xl font-semibold tracking-[2px] mb-3.5">Sights & Sounds Exhibition</div>
+              <div class="text-xs tracking-[0.5px]">Jakarta, Indonesia</div>
+              <div class="text-xs tracking-[0.5px]">Wed, 15 Nov, 4:00 PM</div>
+              <div class="flex items-center gap-5">
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Detail</a></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Update</a></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Delete</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-start gap-6 border-b-2 py-7">
+            <div>
+              <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
+                <div class="text-sm font-semibold text-[#FF8900]">15</div>
+                <div class="text-xs font-medium text-[#C1C5D0]">Wed</div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start text-[#373A42] gap-[5px]">
+              <div class="text-2xl font-semibold tracking-[2px] mb-3.5">Sights & Sounds Exhibition</div>
+              <div class="text-xs tracking-[0.5px]">Jakarta, Indonesia</div>
+              <div class="text-xs tracking-[0.5px]">Wed, 15 Nov, 4:00 PM</div>
+              <div class="flex items-center gap-5">
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Detail</a></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Update</a></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Delete</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-start gap-6 border-b-2 py-7">
+            <div>
+              <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
+                <div class="text-sm font-semibold text-[#FF8900]">15</div>
+                <div class="text-xs font-medium text-[#C1C5D0]">Wed</div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start text-[#373A42] gap-[5px]">
+              <div class="text-2xl font-semibold tracking-[2px] mb-3.5">Sights & Sounds Exhibition</div>
+              <div class="text-xs tracking-[0.5px]">Jakarta, Indonesia</div>
+              <div class="text-xs tracking-[0.5px]">Wed, 15 Nov, 4:00 PM</div>
+              <div class="flex items-center gap-5">
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Detail</a></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Update</a></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Delete</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-start gap-6 border-b-2 py-7">
+            <div>
+              <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
+                <div class="text-sm font-semibold text-[#FF8900]">15</div>
+                <div class="text-xs font-medium text-[#C1C5D0]">Wed</div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start text-[#373A42] gap-[5px]">
+              <div class="text-2xl font-semibold tracking-[2px] mb-3.5">Sights & Sounds Exhibition</div>
+              <div class="text-xs tracking-[0.5px]">Jakarta, Indonesia</div>
+              <div class="text-xs tracking-[0.5px]">Wed, 15 Nov, 4:00 PM</div>
+              <div class="flex items-center gap-5">
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Detail</a></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Update</a></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="#">Delete</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="md:bg-[#F4F7FF] w-[100%] flex flex-col items-start md:items-center justify-start md:justify-center px-9 md:px-11 xl:px-60 2xl:px-80">
+      <div class="w-[100%] flex flex-col md:flex-row justify-center md:justify-between gap-8 lg:gap-32 pt-11 mb-7">
+        <div>
+          <div class="flex justify-start items-center w-auto md:w-48 gap-3.5">
+            <div class="block">
+              <img src="./assets/img/icon-logo.svg" alt="" />
+            </div>
+            <div>
+              <a href="./index.html">
+                <p class="text-2xl font-semibold text-[#3366FF] tracking-[1px]">We<span class="text-[#FF3D71]">tick</span></p>
+              </a>
+            </div>
+          </div>
+          <div class="mt-7 text-sm text-[#373a42] font-semibold tracking-[1px]">Find events you love with our!</div>
+          <div class="flex items-center gap-5 md:gap-0.5 lg:gap-5 mt-4">
+            <div>
+              <a href="#"> <img src="./assets/img/fb-ic.svg" alt="" /></a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./assets/img/wa-ic.svg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./assets/img/ig-ic.svg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./assets/img/tt-ic.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 mt-2">
+          <div class="text-base text-[#373a42] font-semibold tracking-[1px]">Wetick</div>
+          <div>
+            <ul class="flex flex-col gap-4 text-sm text-[#c1c5d0] font-medium tracking-[1px]">
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> About Us </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Features </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Blog </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Payment </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Mobile App </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 mt-2">
+          <div class="text-base text-[#373a42] font-semibold tracking-[1px]">Features</div>
+          <div>
+            <ul class="flex flex-col gap-4 text-sm text-[#c1c5d0] font-medium tracking-[1px]">
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Booking</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Create Event</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Discover</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 mt-2">
+          <div class="text-base text-[#373a42] font-semibold tracking-[1px]">Company</div>
+          <div>
+            <ul class="flex flex-col gap-4 text-sm text-[#c1c5d0] font-medium tracking-[1px]">
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Partnership</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Help</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Terms of Service</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="md:self-start flex-1 my-7 text-base text-[#5a7184] font-semibold tracking-[1px]">&copy; 2020 Wetick All Rights Reserved</div>
+    </footer>
+
+    <div class="w-[100vw] h-[210vh] md:h-[140vh] lg:h-[130vh] bg-slate-700 bg-opacity-25 absolute top-0 left-0 flex items-start justify-center pt-36">
+      <div class="container bg-white px-9 md:px-20 py-20 rounded-3xl relative">
+        <div>
+          <div class="text-[20px] text-[#373a42] font-semibold tracking-[1px] mb-11">Create Event</div>
+          <form action="./create-events.html">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-9">
+              <div class="flex items-start w-full flex-1">
+                <div class="flex flex-col gap-3.5 w-full">
+                  <div class="flex flex-col align-start justify-start gap-3.5 w-full">
+                    <div class="text-sm text-[#373a42] tracking-[1px]">Name</div>
+                    <div class="w-full">
+                      <input class="border-2 px-3.5 rounded-xl w-full h-[55px] text-sm tracking-[1px]" type="text" placeholder="Input Name Event" />
+                    </div>
+                  </div>
+                  <div class="flex flex-col align-start justify-start gap-3.5 w-full">
+                    <div class="text-sm text-[#373a42] tracking-[1px]">Location</div>
+                    <div class="w-full">
+                      <input class="border-2 px-3.5 rounded-xl w-full h-[55px] text-sm tracking-[1px]" type="text" placeholder="Select Location" />
+                    </div>
+                  </div>
+                  <div class="flex flex-col align-start justify-start gap-3.5 w-full">
+                    <div class="text-sm text-[#373a42] tracking-[1px]">Price</div>
+                    <div class="w-full">
+                      <input class="border-2 px-3.5 rounded-xl w-full h-[55px] text-sm tracking-[1px]" type="text" placeholder="Input Price ..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start w-full flex-1">
+                <div class="flex flex-col gap-3.5 w-full">
+                  <div class="flex flex-col align-start justify-start gap-3.5 w-full">
+                    <div class="text-sm text-[#373a42] tracking-[1px]">Category</div>
+                    <div class="w-full">
+                      <input class="border-2 px-3.5 rounded-xl w-full h-[55px] text-sm tracking-[1px]" type="text" placeholder="Select Category" />
+                    </div>
+                  </div>
+                  <div class="flex flex-col align-start justify-start gap-3.5 w-full">
+                    <div class="text-sm text-[#373a42] tracking-[1px]">Date Time Show</div>
+                    <div class="w-full">
+                      <input class="border-2 px-3.5 rounded-xl w-full h-[55px] text-sm tracking-[1px]" type="text" placeholder="01/01/2022" />
+                    </div>
+                  </div>
+                  <div class="flex flex-col align-start justify-start gap-3.5 w-full">
+                    <div class="text-sm text-[#373a42] tracking-[1px]">Image</div>
+                    <div class="w-full">
+                      <input class="border-2 px-3.5 rounded-xl w-full h-[55px] text-sm tracking-[1px]" type="text" placeholder="Chose File ..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-[20px] text-[#373a42] font-semibold tracking-[1px] mt-11">
+              <div class="text-sm text-[#373a42] tracking-[1px] mb-3">Detail</div>
+              <div class="w-full">
+                <textarea class="border-2 w-full rounded-xl text-sm tracking-[1px] px-3.5 py-3.5" name="" id="" cols="30" rows="3" placeholder="Input Detail"></textarea>
+              </div>
+            </div>
+            <div class="w-full flex items-center justify-end mt-11">
+              <button class="shadow-for-all-button w-[315px] h-[55px] rounded-xl bg-[#4c3f91] text-white text-sm font-semibold tracking-[1px]" type="submit">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

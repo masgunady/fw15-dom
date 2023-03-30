@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styling.css" />
+    <title>Payment</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white md:bg-[#F4F7FF]">
+    <nav class="flex justify-between items-center w-[100%] h-24 px-9 lg:px-14 bg-white">
+      <div class="flex justify-start items-center gap-2 lg:gap-3.5">
+        <div>
+          <img src="./assets/img/icon-logo.svg" alt="" />
+        </div>
+        <div>
+          <a href="./index.html">
+            <p class="text-2xl font-semibold text-[#3366FF] tracking-[1px]">We<span class="text-[#FF3D71]">tick</span></p>
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <ul class="flex gap-5 lg:gap-12 text-sm text-[#373a42] font-semibold tracking-[1px]">
+          <li class="cursor-pointer hover:border-b-2 border-[#4c3f91]"><a href="./index.html">Home</a></li>
+          <li class="cursor-pointer hover:border-b-2 border-[#4c3f91]"><a href="./create-events.html">Create Event</a></li>
+          <li class="cursor-pointer hover:border-b-2 border-[#4c3f91]"><a href="./index.html#discoverPlace">Location</a></li>
+        </ul>
+      </div>
+      <div class="hidden md:block">
+        <div class="flex justify-start items-center gap-[10px] lg:gap-[15px]">
+          <div class="inline-block rounded-full p-[2px] bg-gradient-to-tr from-[#3366FF] to-[#884DFF]">
+            <img class="w-12 h-12 border-4 border-white rounded-full" src="https://i.pravatar.cc/48" alt="nav-img-profile" />
+          </div>
+          <div class="text-sm text-[#373a42] font-semibold tracking-[1px] object-cover"><a href="./edit-profile.html">John Tompson</a></div>
+        </div>
+      </div>
+      <div class="block md:hidden">
+        <div>
+          <button>
+            <i data-feather="align-justify"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main class="flex justify-center lg:mt-12">
+      <div class="container flex flex-col md:flex-row justify-between items-center gap-11 md:items-start bg-white px-7 lg:px-24 py-24 lg:rounded-3xl">
+        <div class="w-full h-full flex-1">
+          <div class="flex flex-col justify-start gap-12 w-full">
+            <div class="flex items-center justify-between">
+              <div class="text-[20px] text-[373a42] font-semibold tracking-[1px] capitalize">Payment method</div>
+            </div>
+            <div class="pt-4 flex flex-col gap-7">
+              <div class="flex items-center justify-between gap-2">
+                <div class="w-[10%]"><input type="radio" name="change-payment" id="" /></div>
+                <div class="w-[15%]"><img src="./assets/img/cc-ic.svg" alt="" /></div>
+                <div class="w-[100%] text-sm text-[#373a42] font-semibold tracking-[1px]">Card</div>
+                <div class="w-[20%]"><i data-feather="chevron-up"></i></div>
+              </div>
+              <div class="payment-scrolling-card w-full flex justify-end items-center overflow-scroll">
+                <div class="w-[93%] flex items-center justify-start gap-4">
+                  <img src="./assets/img/card-display.png" alt="" />
+                  <div class="min-w-[60px] w-[60px] h-[60px] border-dashed border-2 border-[#4c3f91] flex items-center justify-center rounded-2xl text-[#4c3f91] text-[36px]"><a href="#">+</a></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between gap-2">
+                <div class="w-[10%]"><input type="radio" name="change-payment" id="" /></div>
+                <div class="w-[15%]"><img src="./assets/img/bank-ic.svg" alt="" /></div>
+                <div class="w-[100%] text-sm text-[#373a42] font-semibold tracking-[1px] capitalize">bank transfer</div>
+                <div class="w-[20%]"><i data-feather="chevron-down"></i></div>
+              </div>
+              <div class="flex items-center justify-between gap-2">
+                <div class="w-[10%]"><input type="radio" name="change-payment" id="" /></div>
+                <div class="w-[15%]"><img src="./assets/img/retail-ic.svg" alt="" /></div>
+                <div class="w-[100%] text-sm text-[#373a42] font-semibold tracking-[1px] capitalize">retail</div>
+                <div class="w-[20%]"><i data-feather="chevron-down"></i></div>
+              </div>
+              <div class="flex items-center justify-between gap-2">
+                <div class="w-[10%]"><input type="radio" name="change-payment" id="" /></div>
+                <div class="w-[15%]"><img src="./assets/img/e-money-ic.svg" alt="" /></div>
+                <div class="w-[100%] text-sm text-[#373a42] font-semibold tracking-[1px] capitalize">e-money</div>
+                <div class="w-[20%]"><i data-feather="chevron-down"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-11 md:mt-0 flex flex-col flex-1 gap-7 w-full">
+          <div class="flex flex-col justify-start gap-12 w-full">
+            <div class="flex items-center justify-between">
+              <div class="text-[20px] text-[373a42] font-semibold tracking-[1px] capitalize">ticket details</div>
+            </div>
+            <div class="pt-4 flex flex-col gap-3.5">
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-[#373a42] font-semibold tracking-[0.5px]">Ticket Section</div>
+                <div class="text-sm text-[#4c3f91] font-semibold tracking-[0.5px]">VIP</div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-[#373a42] font-semibold tracking-[0.5px]">Quantity</div>
+                <div class="text-sm text-[#4c3f91] font-semibold tracking-[0.5px]">2</div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-[#373a42] font-semibold tracking-[0.5px]">Total Payment</div>
+                <div class="text-sm text-[#4c3f91] font-semibold tracking-[0.5px]">$70</div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full mt-11">
+            <div class="shadow-for-all-button flex items-center justify-center bg-[#4c3f91] w-full md:w-[315px] h-[55px] rounded-2xl text-white text-base font-semibold tracking-[1px]">
+              <a class="h-full w-full flex items-center justify-center" href="#">Payment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-white md:bg-[#F4F7FF] w-[100%] flex flex-col items-start md:items-center justify-start md:justify-center px-9 md:px-11 xl:px-60 2xl:px-80">
+      <div class="w-[100%] flex flex-col md:flex-row justify-center md:justify-between gap-8 lg:gap-32 pt-11 mb-7">
+        <div>
+          <div class="flex justify-start items-center w-auto md:w-48 gap-3.5">
+            <div class="block">
+              <img src="./assets/img/icon-logo.svg" alt="" />
+            </div>
+            <div>
+              <a href="./index.html">
+                <p class="text-2xl font-semibold text-[#3366FF] tracking-[1px]">We<span class="text-[#FF3D71]">tick</span></p>
+              </a>
+            </div>
+          </div>
+          <div class="mt-7 text-sm text-[#373a42] font-semibold tracking-[1px]">Find events you love with our!</div>
+          <div class="flex items-center gap-5 md:gap-0.5 lg:gap-5 mt-4">
+            <div>
+              <a href="#"> <img src="./assets/img/fb-ic.svg" alt="" /></a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./assets/img/wa-ic.svg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./assets/img/ig-ic.svg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./assets/img/tt-ic.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 mt-2">
+          <div class="text-base text-[#373a42] font-semibold tracking-[1px]">Wetick</div>
+          <div>
+            <ul class="flex flex-col gap-4 text-sm text-[#c1c5d0] font-medium tracking-[1px]">
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> About Us </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Features </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Blog </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Payment </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Mobile App </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 mt-2">
+          <div class="text-base text-[#373a42] font-semibold tracking-[1px]">Features</div>
+          <div>
+            <ul class="flex flex-col gap-4 text-sm text-[#c1c5d0] font-medium tracking-[1px]">
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Booking</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Create Event</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Discover</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 mt-2">
+          <div class="text-base text-[#373a42] font-semibold tracking-[1px]">Company</div>
+          <div>
+            <ul class="flex flex-col gap-4 text-sm text-[#c1c5d0] font-medium tracking-[1px]">
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Partnership</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Help</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Terms of Service</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="md:self-start flex-1 my-7 text-base text-[#5a7184] font-semibold tracking-[1px]">&copy; 2020 Wetick All Rights Reserved</div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
