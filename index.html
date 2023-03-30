@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="indexPage">
     <nav class="flex justify-between items-center w-[100%] h-24 px-7 md:px-9 lg:px-14">
       <div class="flex justify-start items-center gap-2 lg:gap-3.5 basis-1/4">
         <div>
@@ -40,12 +40,21 @@
       </div>
       <div class="block md:hidden">
         <div>
-          <button>
+          <button id="btnShowNavMobile">
             <i data-feather="align-justify"></i>
           </button>
         </div>
       </div>
     </nav>
+    <div class="cust-nav-mobile hidden ease-linear duration-700 justify-between items-center w-full px-7 md:px-9 lg:px-14 relative">
+      <div class="absolute z-20 bg-white w-full left-0 top-0 py-7">
+        <ul class="flex flex-col justify-center items-center gap-7 lg:gap-12 text-sm text-[#373a42] font-semibold tracking-[1px]">
+          <li class="cursor-pointer border-b-2 border-[#4c3f91]"><a href="./index.html">Home</a></li>
+          <li class="cursor-pointer hover:border-b-2 border-[#4c3f91]"><a href="./auth-login.html">Create Event</a></li>
+          <li class="cursor-pointer hover:border-b-2 border-[#4c3f91]"><a href="#discoverPlace">Location</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="main-index">
       <div class="header-container">
         <div class="h-left">
@@ -587,5 +596,6 @@
     <script>
       feather.replace();
     </script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

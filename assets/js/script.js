@@ -75,12 +75,34 @@ if (signUpForm) {
     });
 }
 
+
+if (signUpForm) {
+    const chkBox = document.getElementById('chkBox').checked = false;
+    const btnSubmit = document.getElementById('buttonSubmit').disabled = true;
+}
+if (signUpForm) {
+    const chkBox = document.getElementById('chkBox');
+    const btnSubmit = document.getElementById('buttonSubmit');
+
+    chkBox.addEventListener('click', function () {
+        if (chkBox.checked === true) {
+            btnSubmit.disabled = false;
+            btnSubmit.className = 'shadow-for-all-button w-full h-14 rounded-xl  text-base font-semibold tracking-[1px] text-white bg-[#4c3f91]'
+        } else {
+            btnSubmit.disabled = true;
+            btnSubmit.className = 'shadow-for-all-button w-full h-14 rounded-xl  text-base font-semibold tracking-[1px] text-white bg-[#C1C5D0]'
+        }
+    })
+}
+
 if (signUpForm) {
     const usernameMessage = document.querySelector('.cust-message-username');
     const emailMessage = document.querySelector('.cust-message-email');
     const passwordMessage = document.querySelector('.cust-message-password');
     signUpForm.addEventListener('submit', function (event) {
-        // console.log(event);
+        console.log(event);
+        event.preventDefault();
+        // return
         if (event.target.username.value == usernameVal) {
             // window.location.href = 'index.html';
             usernameMessage.style.display = 'flex';
@@ -104,7 +126,7 @@ if (signUpForm) {
             window.location.href = 'auth-login.html';
         }
 
-        event.preventDefault();
+
     });
 }
 
@@ -127,4 +149,26 @@ if (forgotPassForm) {
 
 
     });
+}
+
+// index
+const btnShowNavMobile = document.getElementById('btnShowNavMobile');
+const indexPage = document.querySelector('.indexPage');
+const mainIndex = document.querySelector('.main-index');
+
+if (indexPage) {
+    const navIndexPageMobile = document.querySelector('.cust-nav-mobile');
+    btnShowNavMobile.addEventListener('click', function () {
+        if (navIndexPageMobile.style.display === 'none') {
+            navIndexPageMobile.style.display = 'flex';
+        } else {
+            navIndexPageMobile.style.display = 'none';
+        }
+    });
+
+    mainIndex.addEventListener('click', function () {
+        if (navIndexPageMobile.style.display === 'flex') {
+            navIndexPageMobile.style.display = 'none';
+        }
+    })
 }
