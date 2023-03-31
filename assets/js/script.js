@@ -1,3 +1,5 @@
+import {dataEvent} from './list.js';
+
 const contIconEye = document.querySelector('.cust-container-icon-eye');
 const contIconEye2 = document.querySelector('.cust-container-icon-eye2');
 const passInput = document.querySelector('.cust-pass-input');
@@ -175,3 +177,39 @@ if (indexPage) {
     })
 }
 
+
+
+
+// import the exports
+if(indexPage){
+    const eventContainer = document.querySelector('.event-banner-container');
+    const data = dataEvent;
+    let html = '';
+    data.forEach((event) => {
+        html += `<div class="event-banner">
+        <img src="${event.banner}" alt="" class="src" />
+        <div class="text">
+        <div class="date">${event.event_date}</div>
+        <div class="title"><a href="./event-detail.html">${event.event_name}</a></div>
+        <div class="attendance">
+            <div class="img-profile">
+            <img src="${event.attendance.user1}" alt="" />
+            </div>
+            <div class="img-profile">
+            <img src="${event.attendance.user2}" alt="" />
+            </div>
+            <div class="img-profile">
+            <img src="${event.attendance.user3}" alt="" />
+            </div>
+            <div class="img-profile">
+            <img src="${event.attendance.user4}" alt="" />
+            </div>
+        </div>
+        </div>
+        <div class="dissolve-black"></div>
+    </div> `;
+
+    eventContainer.innerHTML = html;
+    });
+
+}

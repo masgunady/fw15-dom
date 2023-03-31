@@ -1,0 +1,123 @@
+ export const dataEvent = [
+
+      {
+           event_date: 'Thu, 15 Nov, 7:00 PM',
+           event_name:'See it in Gold Class',
+           attendance: {
+               user1 :'https://i.pravatar.cc/28',
+               user2 :'https://i.pravatar.cc/28',
+               user3 :'https://i.pravatar.cc/28',
+               user4 :'https://i.pravatar.cc/28',
+           },
+           banner: './assets/img/event/event-2.png',
+           category:'art',
+      },
+      {
+            event_date: 'Thu, 15 Nov, 5:00 PM',
+            event_name:'The Sunset of Ramadan',
+            attendance: {
+               user1 :'https://i.pravatar.cc/28',
+               user2 :'https://i.pravatar.cc/28',
+               user3 :'https://i.pravatar.cc/28',
+               user4 :'https://i.pravatar.cc/28',
+            },
+            banner: './assets/img/event/sunset-ramadhan.jpg',
+            category:'outdoor',
+      },
+      {
+            event_date: 'Thu, 16 Nov, 7:00 PM',
+            event_name:'Fun Electro Music',
+            attendance: {
+               user1 :'https://i.pravatar.cc/28',
+               user2 :'https://i.pravatar.cc/28',
+               user3 :'https://i.pravatar.cc/28',
+               user4 :'https://i.pravatar.cc/28',
+            },
+            banner: './assets/img/event/fun-electro-mussic.jpg',
+            category:'art',
+      },
+      {
+         event_date: 'Wed, 15 Nov, 4:00 PM',
+         event_name:'Sight & Sound Exhibition',
+         attendance: {
+             user1 :'https://i.pravatar.cc/28',
+             user2 :'https://i.pravatar.cc/28',
+             user3 :'https://i.pravatar.cc/28',
+             user4 :'https://i.pravatar.cc/28',
+         },
+         banner: './assets/img/event/event-1.png',
+         category:'music',
+      },
+      {
+               event_date: 'Thu, 16 Nov, 7:00 PM',
+               event_name:'Beautyful Light Festival',
+               attendance: {
+                  user1 :'https://i.pravatar.cc/28',
+                  user2 :'https://i.pravatar.cc/28',
+                  user3 :'https://i.pravatar.cc/28',
+                  user4 :'https://i.pravatar.cc/28',
+               },
+               banner: './assets/img/event/light-festival.jpg',
+               category:'art',
+      },
+      {
+               event_date: 'Thu, 16 Nov, 7:00 PM',
+               event_name:'Photographer Meets',
+               attendance: {
+                  user1 :'https://i.pravatar.cc/28',
+                  user2 :'https://i.pravatar.cc/28',
+                  user3 :'https://i.pravatar.cc/28',
+                  user4 :'https://i.pravatar.cc/28',
+               },
+               banner: './assets/img/event/photographer-meeting.jpg',
+               category:'art',
+      },
+      {
+               event_date: 'Thu, 16 Nov, 7:00 PM',
+               event_name:'Sahur With Mussic',
+               attendance: {
+                  user1 :'https://i.pravatar.cc/28',
+                  user2 :'https://i.pravatar.cc/28',
+                  user3 :'https://i.pravatar.cc/28',
+                  user4 :'https://i.pravatar.cc/28',
+               },
+               banner: './assets/img/event/sahur-with-mussic.jpg',
+               category:'music',
+      },
+      {
+                  event_date: 'Thu, 16 Nov, 7:00 PM',
+                  event_name:'Karawang Oct. Summit',
+                  attendance: {
+                     user1 :'https://i.pravatar.cc/28',
+                     user2 :'https://i.pravatar.cc/28',
+                     user3 :'https://i.pravatar.cc/28',
+                     user4 :'https://i.pravatar.cc/28',
+                  },
+                  banner: './assets/img/event/summit-everywhere.jpg',
+                  category:'outdoor',
+      },
+      {
+                  event_date: 'Thu, 16 Nov, 7:00 PM',
+                  event_name:'Vindes Main Tennis',
+                  attendance: {
+                     user1 :'https://i.pravatar.cc/28',
+                     user2 :'https://i.pravatar.cc/28',
+                     user3 :'https://i.pravatar.cc/28',
+                     user4 :'https://i.pravatar.cc/28',
+                  },
+                  banner: './assets/img/event/vindes-main-tenis.jpg',
+                  category:'art',
+      },
+      {
+         event_date: 'Thu, 16 Nov, 7:00 PM',
+         event_name:'Sunday Color Festival',
+         attendance: {
+            user1 :'https://i.pravatar.cc/28',
+            user2 :'https://i.pravatar.cc/28',
+            user3 :'https://i.pravatar.cc/28',
+            user4 :'https://i.pravatar.cc/28',
+         },
+         banner: './assets/img/event/sunday-color-festival.jpg',
+         category:'art',
+      },
+]
