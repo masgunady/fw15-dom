@@ -158,6 +158,8 @@ const mainIndex = document.querySelector('.main-index');
 
 if (indexPage) {
     const navIndexPageMobile = document.querySelector('.cust-nav-mobile');
+    navIndexPageMobile.style.display = 'none';
+
     btnShowNavMobile.addEventListener('click', function () {
         if (navIndexPageMobile.style.display === 'none') {
             navIndexPageMobile.style.display = 'flex';
@@ -172,3 +174,4 @@ if (indexPage) {
         }
     })
 }
+
