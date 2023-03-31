@@ -1,4 +1,6 @@
-import {dataEvent} from './list.js';
+import {
+    dataEvent
+} from './list.js';
 
 const contIconEye = document.querySelector('.cust-container-icon-eye');
 const contIconEye2 = document.querySelector('.cust-container-icon-eye2');
@@ -14,16 +16,16 @@ const forgotPassForm = document.querySelector('.cust-form-forgot-pass');
 
 
 if (loginForm) {
-    iconEyeClass = iconEye.classList;
+    // iconEyeClass = iconEye.classList;
     contIconEye.addEventListener('click', function () {
         if (passInput.type === 'password') {
             passInput.type = 'text';
-            iconEyeClass.remove('fa-eye');
-            iconEyeClass.add('fa-eye-slash');
+            iconEye.classList.remove('fa-eye');
+            iconEye.classList.add('fa-eye-slash');
         } else {
             passInput.type = 'password';
-            iconEyeClass.remove('fa-eye-slash');
-            iconEyeClass.add('fa-eye');
+            iconEye.classList.remove('fa-eye-slash');
+            iconEye.classList.add('fa-eye');
         }
     });
 }
@@ -49,30 +51,28 @@ if (loginForm) {
 }
 
 if (signUpForm) {
-    iconEyeClass = iconEye.classList;
-    iconEyeClass2 = iconEye2.classList;
 
     contIconEye.addEventListener('click', function () {
         if (passInput.type === 'password') {
             passInput.type = 'text';
-            iconEyeClass.remove('fa-eye');
-            iconEyeClass.add('fa-eye-slash');
+            iconEye.classList.remove('fa-eye');
+            iconEye.classList.add('fa-eye-slash');
         } else {
             passInput.type = 'password';
-            iconEyeClass.remove('fa-eye-slash');
-            iconEyeClass.add('fa-eye');
+            iconEye.classList.remove('fa-eye-slash');
+            iconEye.classList.add('fa-eye');
         }
     });
 
     contIconEye2.addEventListener('click', function () {
         if (passInput2.type === 'password') {
             passInput2.type = 'text';
-            iconEyeClass2.remove('fa-eye');
-            iconEyeClass2.add('fa-eye-slash');
+            iconEye2.classList.remove('fa-eye');
+            iconEye2.classList.add('fa-eye-slash');
         } else {
             passInput2.type = 'password';
-            iconEyeClass2.remove('fa-eye-slash');
-            iconEyeClass2.add('fa-eye');
+            iconEye2.classList.remove('fa-eye-slash');
+            iconEye2.classList.add('fa-eye');
         }
     });
 }
@@ -181,7 +181,7 @@ if (indexPage) {
 
 
 // import the exports
-if(indexPage){
+if (indexPage) {
     const eventContainer = document.querySelector('.event-banner-container');
     const data = dataEvent;
     let html = '';
@@ -190,7 +190,7 @@ if(indexPage){
         <img src="${event.banner}" alt="" class="src" />
         <div class="text">
         <div class="date">${event.event_date}</div>
-        <div class="title"><a href="./event-detail.html">${event.event_name}</a></div>
+        <div class="title"><a href="./event-detail.html?id=${event.id}">${event.event_name}</a></div>
         <div class="attendance">
             <div class="img-profile">
             <img src="${event.attendance.user1}" alt="" />
@@ -209,7 +209,35 @@ if(indexPage){
         <div class="dissolve-black"></div>
     </div> `;
 
-    eventContainer.innerHTML = html;
+        eventContainer.innerHTML = html;
     });
 
+}
+
+const eventHandlingPage = document.querySelector('.cust-event-handle');
+
+if (eventHandlingPage) {
+    const url = window.location.href;
+    const id = url.split('?')[1].split('=')[1];
+    const imgContainer = document.querySelector('.cust-img-container');
+    const eventLocContainerM = document.querySelector('.cust-event-location-mobile');
+    const eventLocContainer = document.querySelector('.cust-event-location');
+    const eventDateContainerM = document.querySelector('.cust-event-date-mobile');
+    const eventDateContainer = document.querySelector('.cust-event-date');
+    const eventTitleContainerM = document.querySelector('.cust-event-title-mobile');
+    const eventTitleContainer = document.querySelector('.cust-event-title');
+
+
+    const data = dataEvent;
+    const eventArr = data[id - 1];
+    imgContainer.innerHTML = `<img class="w-full h-full object-cover" src="${eventArr.banner}" alt="" />`
+    eventLocContainer.innerHTML = `${eventArr.event_location}`
+    eventLocContainerM.innerHTML = `${eventArr.event_location}`
+    eventDateContainerM.innerHTML = `${eventArr.event_date}`
+    eventDateContainer.innerHTML = `${eventArr.event_date}`
+    eventTitleContainerM.innerHTML = `${eventArr.event_name}`
+    eventTitleContainer.innerHTML = `${eventArr.event_name}`
+
+
+    // const getItemID = linkSeparate[1].split('=')[1];
 }
