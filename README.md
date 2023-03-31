@@ -12,4 +12,4 @@ thanks for the mentor who has guided me.
 
 To see this project please visit the following link :
 
-https://gndsulistiawan-fw15-html-css.netlify.app/
+https://gndsulistiawan-fw15-dom.netlify.app/index.html
