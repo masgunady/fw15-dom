@@ -1,7 +1,7 @@
  export const dataEvent = [{
        id: 1,
        event_date: 'Thu, 15 Nov, 7:00 PM',
-       event_name: 'Street Mussic Fest',
+       event_name: 'Street Music Fest',
        event_location: 'Jakarta, Indonesia',
        attendance: {
           user1: 'https://i.pravatar.cc/28',
@@ -9,7 +9,7 @@
           user3: 'https://i.pravatar.cc/28',
           user4: 'https://i.pravatar.cc/28',
        },
-       banner: './assets/img/event/street-mussic-festival.jpg',
+       banner: './assets/img/event/street-music-festival.jpg',
        category: 'art',
     },
     {
@@ -51,7 +51,7 @@
           user3: 'https://i.pravatar.cc/28',
           user4: 'https://i.pravatar.cc/28',
        },
-       banner: './assets/img/event/fun-electro-mussic.jpg',
+       banner: './assets/img/event/fun-electro-music.jpg',
        category: 'art',
     },
     {
@@ -99,7 +99,7 @@
     {
        id: 8,
        event_date: 'Thu, 16 Nov, 7:00 PM',
-       event_name: 'Sahur With Mussic',
+       event_name: 'Sahur With Music',
        event_location: 'Jakarta, Indonesia',
        attendance: {
           user1: 'https://i.pravatar.cc/28',
@@ -107,7 +107,7 @@
           user3: 'https://i.pravatar.cc/28',
           user4: 'https://i.pravatar.cc/28',
        },
-       banner: './assets/img/event/sahur-with-mussic.jpg',
+       banner: './assets/img/event/sahur-with-music.jpg',
        category: 'music',
     },
     {
