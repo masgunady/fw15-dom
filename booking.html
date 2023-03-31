@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-white md:bg-[#F4F7FF]">
+  <body class="bg-white md:bg-[#F4F7FF] cust-dashboard-handle">
     <nav class="flex justify-between items-center w-[100%] h-24 px-9 lg:px-14 bg-white">
       <div class="flex justify-start items-center gap-2 lg:gap-3.5">
         <div>
@@ -38,13 +38,39 @@
       </div>
       <div class="block md:hidden">
         <div>
-          <button>
+          <button id="btnShowNavMobile">
             <i data-feather="align-justify"></i>
           </button>
         </div>
       </div>
     </nav>
-    <main class="flex justify-center lg:mt-12">
+    <div class="cust-nav-mobile justify-between items-center w-full px-7 md:px-9 lg:px-14 relative">
+      <div class="absolute flex flex-col items-center gap-7 z-40 bg-white w-full overflow-scroll left-0 top-0 py-7 rounded-b-2xl shadow-xl">
+        <div class="w-[85%] border-b-2 py-3">
+          <div class="flex flex-col justify-center items-center gap-3">
+            <!-- in here -->
+            <div class="rounded-full object-cover overflow-hidden">
+              <img src="https://i.pravatar.cc/90" alt="" />
+            </div>
+            <div class="text-base text-[#373a42] font-semibold tracking-[1px]"><a href="./edit-profile.html">John Tompson</a></div>
+          </div>
+        </div>
+        <div class="w-full px-7">
+          <div class="flex justify-start items-center gap-[1px]">
+            <ul class="flex flex-col justify-center items-start gap-7 w-full text-sm text-[#373a42] font-semibold tracking-[1px] capitalize">
+              <li class="flex items-center justify-start gap-3.5"><i data-feather="home"></i> <a href="./index.html">Home</a></li>
+              <li class="flex items-center justify-start gap-3.5"><i data-feather="plus-square"></i> <a href="./create-events.html">Create Event</a></li>
+              <li class="flex items-center justify-start gap-3.5"><i data-feather="list"></i> <a href="./my-booking.html">my booking</a></li>
+              <li class="flex items-center justify-start gap-3.5"><i data-feather="heart"></i> <a href="./my-wishlists.html">my wishlist</a></li>
+              <li class="flex items-center justify-start gap-3.5"><i data-feather="unlock"></i> <a href="./change-pass.html">Change Password</a></li>
+              <li class="flex items-center justify-start gap-3.5"><i data-feather="settings"></i> <a href="#">setting</a></li>
+              <li class="self-center text-[#F03800] my-7 flex items-center justify-start gap-3.5"><i data-feather="log-out"></i> <a href="./auth-login.html">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main-index flex justify-center lg:mt-12">
       <div class="container flex flex-col md:flex-row justify-between items-center gap-11 md:items-start bg-white px-7 lg:px-24 py-24 lg:rounded-3xl">
         <div class="w-full h-full flex-1">
           <div class="flex items-center justify-center w-full h-[75%]">
@@ -246,5 +272,7 @@
     <script>
       feather.replace();
     </script>
+    <script type="module" src="./assets/js/script.js"></script>
+    <!-- <script type="module" src="./assets/js/list.js"></script> -->
   </body>
 </html>
