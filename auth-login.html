@@ -43,14 +43,23 @@
             <div class="text-sm font-semibold tracking-[0.5px] text-[#373A42] mb-8">Hi, Welcome back to Urticket!</div>
             <form class="cust-form-login flex flex-col gap-3.5">
               <div class="text-sm tracking[0.5]">
-                <input class="cust-username-input w-full h-14 px-3 outline-[#C1C5D0] border-2 rounded-xl" type="text" name="username" placeholder="Username" required />
+                <input class="cust-username-input w-full h-14 px-3 outline-[#C1C5D0] border-2 rounded-xl" type="text" name="username" placeholder="Username" />
+              </div>
+              <div class="cust-message-for-username hidden items-center justify-start text-sm text-red-500 font-medium tracking[0.5]">
+                <!-- message -->
               </div>
               <div class="text-sm tracking[0.5]">
-                <input class="cust-email-input w-full h-14 px-3 outline-[#C1C5D0] border-2 rounded-xl" type="email" name="email" placeholder="Email" required />
+                <input class="cust-email-input w-full h-14 px-3 outline-[#C1C5D0] border-2 rounded-xl" type="text" name="email" placeholder="Email" />
+              </div>
+              <div class="cust-message-for-email hidden items-center justify-start text-sm text-red-500 font-medium tracking[0.5]">
+                <!-- message -->
               </div>
               <div class="text-sm tracking[0.5] relative">
-                <input class="cust-pass-input w-full h-14 px-3 outline-[#C1C5D0] border-2 rounded-xl" type="password" name="password" placeholder="Password" minlength="4" required />
+                <input class="cust-pass-input w-full h-14 px-3 outline-[#C1C5D0] border-2 rounded-xl" type="password" name="password" placeholder="Password" />
                 <div class="cust-container-icon-eye absolute top-4 right-4 text-[#4c3f91]"><i class="cust-eye-icon fa fa-eye fa-lg"></i></div>
+              </div>
+              <div class="cust-message-for-password hidden items-center justify-start text-sm text-red-500 font-medium tracking[0.5]">
+                <!-- message -->
               </div>
               <div class="cust-message-wrong-input hidden items-center justify-center text-sm text-red-500 font-medium tracking[0.5]">
                 <!-- message -->

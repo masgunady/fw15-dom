@@ -4,6 +4,8 @@ import {
 
 const contIconEye = document.querySelector('.cust-container-icon-eye');
 const contIconEye2 = document.querySelector('.cust-container-icon-eye2');
+const usernameInput = document.querySelector('.cust-username-input');
+const emailInput = document.querySelector('.cust-email-input');
 const passInput = document.querySelector('.cust-pass-input');
 // const passInput = document.getElementsByName('password');
 const passInput2 = document.querySelector('.cust-pass-input2');
@@ -14,6 +16,16 @@ const loginForm = document.querySelector('.cust-form-login');
 const signUpForm = document.querySelector('.cust-form-signup');
 const forgotPassForm = document.querySelector('.cust-form-forgot-pass');
 
+
+
+const usernameVal = 'gnd';
+const emailVal = 'gnd@gmail.com';
+const passwordVal = 'gnd12345';
+const messageWrong = document.querySelector('.cust-message-wrong-input');
+const messageForUsername = document.querySelector('.cust-message-for-username');
+const messageForEmail = document.querySelector('.cust-message-for-email');
+const messageForPassword = document.querySelector('.cust-message-for-password');
+const messageForPassword2 = document.querySelector('.cust-message-for-password2');
 
 if (loginForm) {
     // iconEyeClass = iconEye.classList;
@@ -30,22 +42,59 @@ if (loginForm) {
     });
 }
 
-const usernameVal = 'gnd';
-const emailVal = 'gnd@gmail.com';
-const passwordVal = 'gnd123';
-const messageWrong = document.querySelector('.cust-message-wrong-input');
-
+if (loginForm || signUpForm) {
+    usernameInput.addEventListener('keyup', function () {
+        messageForUsername.style.display = 'none';
+        messageWrong.style.display = 'none';
+    });
+    emailInput.addEventListener('keyup', function () {
+        messageForEmail.style.display = 'none';
+        messageWrong.style.display = 'none';
+    });
+    passInput.addEventListener('keyup', function () {
+        messageForPassword.style.display = 'none';
+        messageWrong.style.display = 'none';
+    });
+}
+if (signUpForm) {
+    passInput2.addEventListener('keyup', function () {
+        messageForPassword2.style.display = 'none';
+        messageWrong.style.display = 'none';
+    });
+}
 
 if (loginForm) {
     loginForm.addEventListener('submit', function (event) {
         // console.log(event);
-        if (event.target.username.value == usernameVal && event.target.email.value == emailVal && event.target.password.value == passwordVal) {
-            window.location.href = 'index.html';
+        if (event.target.username.value == '') {
+            messageForUsername.style.display = 'flex';
+            messageForUsername.innerText = 'Please insert your Username!';
+            if (event.target.email.value == '' || !(event.target.email.value.includes('@'))) {
+                messageForEmail.style.display = 'flex';
+                messageForEmail.innerText = 'Please insert your valid Email!'
+            }
+            if (event.target.password.value == '') {
+                messageForPassword.style.display = 'flex';
+                messageForPassword.innerText = 'Please insert your Password!'
+            }
+        } else if (event.target.email.value == '' || !(event.target.email.value.includes('@'))) {
+            messageForEmail.style.display = 'flex';
+            messageForEmail.innerText = 'Please insert your valid Email!'
+            if (event.target.password.value == '') {
+                messageForPassword.style.display = 'flex';
+                messageForPassword.innerText = 'Please insert your Password!'
+            }
+        } else if (event.target.password.value == '') {
+            messageForPassword.style.display = 'flex';
+            messageForPassword.innerText = 'Please insert your Password!'
         } else {
-            messageWrong.style.display = 'flex';
-            messageWrong.innerText = 'Username or Email or Password Wrong!'
+            if (event.target.username.value == usernameVal && event.target.email.value == emailVal && event.target.password.value == passwordVal) {
+                window.location.href = 'index.html';
+            } else {
+                messageWrong.style.display = 'flex';
+                messageWrong.innerText = 'Username or Email or Password Wrong!'
+            }
         }
-
         event.preventDefault();
     });
 }
@@ -98,57 +147,93 @@ if (signUpForm) {
 }
 
 if (signUpForm) {
-    const usernameMessage = document.querySelector('.cust-message-username');
-    const emailMessage = document.querySelector('.cust-message-email');
-    const passwordMessage = document.querySelector('.cust-message-password');
     signUpForm.addEventListener('submit', function (event) {
-        console.log(event);
+        // console.log(event);
         event.preventDefault();
         // return
-        if (event.target.username.value == usernameVal) {
-            // window.location.href = 'index.html';
-            usernameMessage.style.display = 'flex';
-            usernameMessage.innerText = 'Username has been registered!';
+        if (event.target.username.value == '') {
+            messageForUsername.style.display = 'flex';
+            messageForUsername.innerText = 'Please insert your Username!';
+
+            if (event.target.email.value == '' || !(event.target.email.value.includes('@'))) {
+                messageForEmail.style.display = 'flex';
+                messageForEmail.innerText = 'Please insert your valid Email!';
+            }
+
+            if (event.target.password.value == '' || event.target.password.value.length < 8) {
+                messageForPassword.style.display = 'flex';
+                messageForPassword.innerText = 'Please Insert Your Password with min 8 char';
+            }
+
+            if (event.target.password2.value == '') {
+                messageForPassword2.style.display = 'flex';
+                messageForPassword2.innerText = 'Please Insert Your Password Confirm';
+            }
+
+        } else if (event.target.email.value == '' || !(event.target.email.value.includes('@'))) {
+            messageForEmail.style.display = 'flex';
+            messageForEmail.innerText = 'Please insert your valid Email!';
+
+            if (event.target.password.value == '' || event.target.password.value.length < 8) {
+                messageForPassword.style.display = 'flex';
+                messageForPassword.innerText = 'Please Insert Your Password with min 8 char';
+            }
+
+            if (event.target.password2.value == '') {
+                messageForPassword2.style.display = 'flex';
+                messageForPassword2.innerText = 'Please Insert Your Password Confirm';
+            }
+        } else if (event.target.password.value == '' || event.target.password.value.length < 8) {
+            messageForPassword.style.display = 'flex';
+            messageForPassword.innerText = 'Please Insert Your Password with min 8 char';
+
+            if (event.target.password2.value == '') {
+                messageForPassword2.style.display = 'flex';
+                messageForPassword2.innerText = 'Please Insert Your Password Confirm';
+            }
+        } else if (event.target.password2.value == '') {
+            messageForPassword2.style.display = 'flex';
+            messageForPassword2.innerText = 'Please Insert Your Password Confirm';
+        } else if (event.target.password.value != event.target.password2.value) {
+            messageForPassword2.style.display = 'flex';
+            messageForPassword2.innerText = 'The confirm password not match';
+        } else if (event.target.username.value == usernameVal) {
+            messageForUsername.style.display = 'flex';
+            messageForUsername.innerText = 'Username has been registered';
             if (event.target.email.value == emailVal) {
-                emailMessage.style.display = 'flex';
-                emailMessage.innerText = 'Email has been registered!';
-                if (event.target.password.value != event.target.password2.value) {
-                    passwordMessage.style.display = 'flex';
-                    passwordMessage.innerText = 'Password not match!';
-                }
+                messageForEmail.style.display = 'flex';
+                messageForEmail.innerText = 'Email has been registered';
             }
         } else if (event.target.email.value == emailVal) {
-            emailMessage.style.display = 'flex';
-            emailMessage.innerText = 'Email has been registered!';
-        } else if (event.target.password.value != event.target.password2.value) {
-            passwordMessage.style.display = 'flex';
-            passwordMessage.innerText = 'Password not match!';
-
+            messageForEmail.style.display = 'flex';
+            messageForEmail.innerText = 'Email has been registered';
         } else {
             window.location.href = 'auth-login.html';
         }
-
-
     });
 }
 
 if (forgotPassForm) {
     forgotPassForm.addEventListener('submit', function (event) {
-        console.log(event);
+        // console.log(event);
         event.preventDefault();
-        if (event.target.email.value !== emailVal) {
+
+        if (event.target.email.value == '' || !(event.target.email.value.includes('@'))) {
             messageWrong.style.display = 'flex';
             messageWrong.style.color = 'red';
-            // messageWrong.innerText = 'Email not registered, please ';
+            messageWrong.innerText = 'Please insert your valid Email!'
+        } else if (event.target.email.value !== emailVal) {
+            messageWrong.style.display = 'flex';
+            messageWrong.style.color = 'red';
             messageWrong.innerHTML = `  <div class="flex gap-2">
                                             <p>Email not registered, please</p>
                                             <a class="text-[#4c3f91] font-medium" href="../../auth-register.html"> Register</a>
                                         </div>      
                                     `;
         } else {
+            messageWrong.style.color = '#4c3f91';
             messageWrong.innerText = 'Link reset has been sent. Please check your email!'
         }
-
 
     });
 }
@@ -240,7 +325,7 @@ if (eventHandlingPage) {
 
 }
 
-if(eventHandlingPage){
+if (eventHandlingPage) {
     const navIndexPageMobile = document.querySelector('.cust-nav-mobile');
     navIndexPageMobile.style.display = 'none';
 
@@ -261,7 +346,7 @@ if(eventHandlingPage){
 
 const dashboardHandlePage = document.querySelector('.cust-dashboard-handle');
 
-if(dashboardHandlePage){
+if (dashboardHandlePage) {
     const navIndexPageMobile = document.querySelector('.cust-nav-mobile');
     navIndexPageMobile.style.display = 'none';
 
