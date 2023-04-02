@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styling.css" />
+    <title>Wetick</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="indexPage">
+    <nav class="flex justify-between items-center w-[100%] h-24 px-9 lg:px-14">
+      <div class="flex justify-start items-center gap-2 lg:gap-3.5">
+        <div>
+          <img src="./assets/img/icon-logo.svg" alt="" />
+        </div>
+        <div>
+          <a href="./index.html">
+            <p class="text-2xl font-semibold text-[#3366FF] tracking-[1px]">We<span class="text-[#FF3D71]">tick</span></p>
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <ul class="flex gap-5 lg:gap-12 text-sm text-[#373a42] font-semibold tracking-[1px]">
+          <li class="cursor-pointer border-b-2 border-[#4c3f91]"><a href="./home.html">Home</a></li>
+          <li class="cursor-pointer hover:border-b-2 border-[#4c3f91]"><a href="./create-events.html">Create Event</a></li>
+          <li class="cursor-pointer hover:border-b-2 border-[#4c3f91]"><a href="./home.html#discoverPlace">Location</a></li>
+        </ul>
+      </div>
+      <div class="hidden md:block">
+        <div class="flex justify-start items-center gap-[10px] lg:gap-[15px]">
+          <div class="inline-block rounded-full p-[2px] bg-gradient-to-tr from-[#3366FF] to-[#884DFF]">
+            <img class="w-12 h-12 border-4 border-white rounded-full" src="https://i.pravatar.cc/48" alt="nav-img-profile" />
+          </div>
+          <div class="text-sm text-[#373a42] font-semibold tracking-[1px] object-cover"><a href="./edit-profile.html">John Tompson</a></div>
+        </div>
+      </div>
+      <div class="block md:hidden">
+        <div>
+          <button id="btnShowNavMobile">
+            <i data-feather="align-justify"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="cust-nav-mobile hidden justify-between items-center w-full px-7 md:px-9 lg:px-14 relative">
+      <div class="absolute ease-in-out duration-700 flex flex-col gap-7 z-20 bg-white w-full left-0 top-0 py-7">
+        <ul class="flex flex-col justify-center items-center gap-7 lg:gap-12 text-sm text-[#373a42] font-semibold tracking-[1px]">
+          <li class="cursor-pointer border-b-2 border-[#4c3f91]"><a href="./index.html">Home</a></li>
+          <li class="cursor-pointer hover:border-b-2 border-[#4c3f91]"><a href="./auth-login.html">Create Event</a></li>
+          <li class="cursor-pointer hover:border-b-2 border-[#4c3f91]"><a href="#discoverPlace">Location</a></li>
+        </ul>
+        <div class="w-full">
+          <div class="flex justify-center items-center gap-[1px] lg:gap-[15px]">
+            <div class="w-[130px] md:w-[169px] h-[40px] flex items-center justify-center text-sm text-[#373a42] font-semibold cursor-pointer">
+              <a href="./auth-login.html">Sign In</a>
+            </div>
+            <div class="shadow-for-all-button w-[130px] md:w-[169px] h-[40px] flex items-center justify-center text-sm text-[#fff] font-semibold cursor-pointer bg-[#4c3f91] rounded-lg">
+              <a href="./auth-register.html">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-index">
+      <div class="header-container">
+        <div class="h-left">
+          <div class="h-content">
+            <p>Find events you love with our</p>
+            <div class="search-box">
+              <form action="">
+                <img src="./assets/img/search-ic.svg" alt="" />
+                <input type="text" placeholder="Search event..." />
+                <img src="./assets/img/tag-map-ic.svg" alt="" />
+                <input type="text" placeholder="Where?" />
+                <button>
+                  <img src="./assets/img/arrow-right-ic.svg" alt="" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="h-right">
+          <div class="img-container">
+            <img class="female-img" src="./assets/img/female.png" alt="" />
+            <img class="male-img" src="./assets/img/male.png" alt="" />
+            <div class="dissolve-effect"></div>
+          </div>
+        </div>
+      </div>
+      <div class="event-container">
+        <div class="btn-event-container">
+          <button>Event</button>
+        </div>
+        <div class="title-event-container">
+          <p>Event For You</p>
+        </div>
+        <div class="event-date-container">
+          <button class="btn-left">
+            <img src="./assets/img/arrow-left-ic.svg" alt="" />
+          </button>
+          <div class="event-date">
+            <p>15</p>
+            <p>Wed</p>
+          </div>
+          <div class="event-date">
+            <p>15</p>
+            <p>Wed</p>
+          </div>
+          <div class="event-date event-date-selected">
+            <p>15</p>
+            <p>Wed</p>
+            <p>&bull;</p>
+          </div>
+          <div class="event-date">
+            <p>15</p>
+            <p>Wed</p>
+          </div>
+          <div class="event-date">
+            <p>15</p>
+            <p>Wed</p>
+          </div>
+          <button class="btn-right">
+            <img src="./assets/img/arrow-right-ic.svg" alt="" />
+          </button>
+        </div>
+        <div class="wrap-event">
+          <div class="event-banner-container">
+            <!-- Event Banner -->
+
+            <!-- <div class="event-banner">
+              <img src="./assets/img/event/event-1.png" alt="" class="src" />
+              <div class="text">
+                <div class="date">Wed, 15 Nov, 4:00 PM</div>
+                <div class="title"><a href="./event-detail.html">Sights & Sounds Exhibition</a></div>
+                <div class="attendance">
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="dissolve-black"></div>
+            </div> -->
+          </div>
+        </div>
+        <div class="btn-see-event">
+          <button>See All</button>
+        </div>
+      </div>
+      <div class="discover-place" id="discoverPlace">
+        <div class="discover-place-container">
+          <div class="btn-discover-loc">
+            <button>LOCATION</button>
+          </div>
+          <div class="img-place-container">
+            <div class="img-loc">
+              <div class="text-desc">Discover Events Near You</div>
+              <div class="img-container">
+                <img src="./assets/img/aceh.png" alt="" />
+                <div>Aceh</div>
+              </div>
+              <div class="img-container img-container-hide-desktop">
+                <img src="./assets/img/solo.png" alt="" />
+                <div>Solo</div>
+              </div>
+            </div>
+            <div class="img-loc img-loc-hide-mobile">
+              <div class="img-container">
+                <img src="./assets/img/jakarta.png" alt="" />
+                <div>Jakarta</div>
+              </div>
+              <div class="img-container">
+                <img src="./assets/img/solo.png" alt="" />
+                <div>Solo</div>
+              </div>
+            </div>
+            <div class="img-loc img-loc-hide-mobile">
+              <div class="img-container">
+                <img src="./assets/img/bandung.png" alt="" />
+                <div>Bandung</div>
+              </div>
+              <div class="img-container">
+                <img src="./assets/img/yogyakarta.png" alt="" />
+                <div>Yogyakarta</div>
+              </div>
+            </div>
+            <div class="img-loc img-loc-hide-mobile">
+              <div class="img-container">
+                <img src="./assets/img/bali.png" alt="" />
+                <div>Bali</div>
+              </div>
+              <div class="img-container">
+                <img src="./assets/img/semarang.png" alt="" />
+                <div>Semarang</div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-see-loc">
+            <button>See All</button>
+          </div>
+        </div>
+      </div>
+      <div class="event-category-container">
+        <div class="btn-event-category">
+          <button>Category</button>
+        </div>
+        <div class="title-event-category">Browse Event By Category</div>
+        <div class="wrap-nav-category">
+          <div class="nav-event-category">
+            <ul>
+              <li>Music</li>
+              <li>Arts</li>
+              <li>Outdoors</li>
+              <li>Workshop</li>
+              <li>Sport</li>
+              <li>Festival</li>
+              <li>Fashion</li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap-category-banner">
+          <div class="event-category-banner-container">
+            <button class="btn-left">
+              <img src="./assets/img/arrow-left-ic.svg" alt="" />
+            </button>
+            <div class="event-category-banner">
+              <img src="./assets/img/event/event-1.png" alt="" />
+              <div class="text">
+                <div class="attendance">
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                </div>
+                <div class="date">Wed, 15 Nov, 4:00 PM</div>
+                <div class="title"><a href="./event-detail.html">Sights & Sounds Exhibition</a></div>
+              </div>
+              <div class="blocking-effect"></div>
+            </div>
+            <div class="event-category-banner">
+              <img src="./assets/img/event/event-2.png" alt="" />
+              <div class="text">
+                <div class="attendance">
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                </div>
+                <div class="date">Wed, 15 Nov, 4:00 PM</div>
+                <div class="title"><a href="./event-detail.html">See it in Gold Class</a></div>
+              </div>
+              <div class="blocking-effect"></div>
+            </div>
+            <div class="event-category-banner">
+              <img src="./assets/img/event/event-1.png" alt="" />
+              <div class="text">
+                <div class="attendance">
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                  <div class="img-profile">
+                    <img src="https://i.pravatar.cc/28" alt="" />
+                  </div>
+                </div>
+                <div class="date">Wed, 15 Nov, 4:00 PM</div>
+                <div class="title"><a href="./event-detail.html">Sights & Sounds Exhibition</a></div>
+              </div>
+              <div class="blocking-effect"></div>
+            </div>
+            <button class="btn-right">
+              <img src="./assets/img/arrow-right-ic.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-navigation-left-right-wrap">
+        <div class="btn-navigation-left-right">
+          <button class="btn-left">
+            <img src="./assets/img/arrow-left-ic.svg" alt="" />
+          </button>
+          <button class="btn-right">
+            <img src="./assets/img/arrow-right-ic.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="partner-container">
+        <div class="btn-partner">
+          <button>PARTNER</button>
+        </div>
+        <div class="title-partner">Our Trusted Partners</div>
+        <div class="partner-list-title">By companies like :</div>
+        <div class="img-list-partner">
+          <div class="img-list-partner-col">
+            <div class="img-partner">
+              <img src="./assets/img/partner1.png" alt="" />
+            </div>
+            <div class="img-partner">
+              <img src="./assets/img/partner2.png" alt="" />
+            </div>
+            <div class="img-partner">
+              <img src="./assets/img/partner3.png" alt="" />
+            </div>
+          </div>
+
+          <div class="img-list-partner-col">
+            <div class="img-partner">
+              <img src="./assets/img/partner4.png" alt="" />
+            </div>
+            <div class="img-partner">
+              <img src="./assets/img/partner5.png" alt="" />
+            </div>
+            <div class="img-partner">
+              <img src="./assets/img/partner6.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="w-[100%] flex flex-col items-start md:items-center justify-start md:justify-center px-9 md:px-11 xl:px-60 2xl:px-80">
+      <div class="w-[100%] flex flex-col md:flex-row justify-center md:justify-between gap-8 lg:gap-32 pt-11 mb-7">
+        <div>
+          <div class="flex justify-start items-center w-auto md:w-48 gap-3.5">
+            <div class="block">
+              <img src="./assets/img/icon-logo.svg" alt="" />
+            </div>
+            <div>
+              <a href="./index.html">
+                <p class="text-2xl font-semibold text-[#3366FF] tracking-[1px]">We<span class="text-[#FF3D71]">tick</span></p>
+              </a>
+            </div>
+          </div>
+          <div class="mt-7 text-sm text-[#373a42] font-semibold tracking-[1px]">Find events you love with our!</div>
+          <div class="flex items-center gap-5 md:gap-0.5 lg:gap-5 mt-4">
+            <div>
+              <a href="#"> <img src="./assets/img/fb-ic.svg" alt="" /></a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./assets/img/wa-ic.svg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./assets/img/ig-ic.svg" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./assets/img/tt-ic.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 mt-2">
+          <div class="text-base text-[#373a42] font-semibold tracking-[1px]">Wetick</div>
+          <div>
+            <ul class="flex flex-col gap-4 text-sm text-[#c1c5d0] font-medium tracking-[1px]">
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> About Us </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Features </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Blog </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Payment </a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#"> Mobile App </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 mt-2">
+          <div class="text-base text-[#373a42] font-semibold tracking-[1px]">Features</div>
+          <div>
+            <ul class="flex flex-col gap-4 text-sm text-[#c1c5d0] font-medium tracking-[1px]">
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Booking</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Create Event</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Discover</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 mt-2">
+          <div class="text-base text-[#373a42] font-semibold tracking-[1px]">Company</div>
+          <div>
+            <ul class="flex flex-col gap-4 text-sm text-[#c1c5d0] font-medium tracking-[1px]">
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Partnership</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Help</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Terms of Service</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a class="hover:text-[#373a42]" href="#">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="md:self-start flex-1 my-7 text-base text-[#5a7184] font-semibold tracking-[1px]">&copy; 2020 Wetick All Rights Reserved</div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/list.js"></script>
+  </body>
+</html>

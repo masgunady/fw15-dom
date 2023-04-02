@@ -15,12 +15,13 @@ const iconEye2 = document.querySelector('.cust-eye-icon2');
 const loginForm = document.querySelector('.cust-form-login');
 const signUpForm = document.querySelector('.cust-form-signup');
 const forgotPassForm = document.querySelector('.cust-form-forgot-pass');
+const pageWithModal = document.querySelector('.page-event-modal');
 
 
 
 const usernameVal = 'gnd';
 const emailVal = 'gnd@gmail.com';
-const passwordVal = 'gnd12345';
+const passwordVal = 'Gnd12345!';
 const messageWrong = document.querySelector('.cust-message-wrong-input');
 const messageForUsername = document.querySelector('.cust-message-for-username');
 const messageForEmail = document.querySelector('.cust-message-for-email');
@@ -89,7 +90,7 @@ if (loginForm) {
             messageForPassword.innerText = 'Please insert your Password!'
         } else {
             if (event.target.username.value == usernameVal && event.target.email.value == emailVal && event.target.password.value == passwordVal) {
-                window.location.href = 'index.html';
+                window.location.href = 'home.html';
             } else {
                 messageWrong.style.display = 'flex';
                 messageWrong.innerText = 'Username or Email or Password Wrong!'
@@ -391,4 +392,67 @@ if (dashboardHandlePage) {
             navIndexPageMobile.style.display = 'none';
         }
     })
+}
+
+
+if (pageWithModal) {
+    const btnCreateEvent = document.getElementById('showModalCreateEvent');
+    const btnDetailEvent = document.getElementById('btnDetailEvent');
+    const btnUpdatelEvent = document.getElementById('btnUpdateEvent');
+    const createEventModal = document.querySelector('.create-event-modal');
+    const containerEventModal = document.querySelector('.container-event-modal');
+    const detailEventModal = document.querySelector('.detail-event-modal');
+    const containerDetailEventModal = document.querySelector('.container-detail-event-modal');
+    const updateEventModal = document.querySelector('.update-event-modal');
+    const containerUpdateEventModal = document.querySelector('.container-update-event-modal');
+    createEventModal.style.display = 'none';
+    detailEventModal.style.display = 'none';
+    updateEventModal.style.display = 'none';
+
+
+    btnCreateEvent.addEventListener('click', function () {
+        if (createEventModal.style.display == 'none') {
+            createEventModal.style.display = 'flex'
+        } else {
+            createEventModal.style.display = 'none'
+        }
+    })
+
+    createEventModal.addEventListener('click', event => {
+        const isClickInside = containerEventModal.contains(event.target)
+        if (!isClickInside) {
+            createEventModal.style.display = 'none';
+        }
+    })
+
+    btnDetailEvent.addEventListener('click', function () {
+        if (detailEventModal.style.display == 'none') {
+            detailEventModal.style.display = 'flex'
+        } else {
+            detailEventModal.style.display = 'none'
+        }
+    })
+
+    detailEventModal.addEventListener('click', event => {
+        const isClickInside = containerDetailEventModal.contains(event.target)
+        if (!isClickInside) {
+            detailEventModal.style.display = 'none';
+        }
+    })
+
+    btnUpdatelEvent.addEventListener('click', function () {
+        if (updateEventModal.style.display == 'none') {
+            updateEventModal.style.display = 'flex'
+        } else {
+            updateEventModal.style.display = 'none'
+        }
+    })
+
+    updateEventModal.addEventListener('click', event => {
+        const isClickInside = containerUpdateEventModal.contains(event.target)
+        if (!isClickInside) {
+            updateEventModal.style.display = 'none';
+        }
+    })
+
 }
