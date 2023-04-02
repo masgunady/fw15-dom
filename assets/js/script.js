@@ -151,6 +151,30 @@ if (signUpForm) {
         // console.log(event);
         event.preventDefault();
         // return
+
+        const checkValPass = event.target.password.value;
+        let uppcaseCheck = 0;
+        let lowcaseCheck = 0;
+        let numCheck = 0;
+        for (let i = 0; i < checkValPass.length; i++) {
+            if ('A' <= checkValPass[i] && checkValPass[i] <= 'Z') // check if you have an uppercase
+                uppcaseCheck++;
+            if ('a' <= checkValPass[i] && checkValPass[i] <= 'z') // check if you have a lowercase
+                lowcaseCheck++;
+            if ('0' <= checkValPass[i] && checkValPass[i] <= '9') // check if you have a numeric
+                numCheck++;
+        }
+        const totalCheck = uppcaseCheck + lowcaseCheck + numCheck;
+        // console.log(checkValPass.length)
+        // console.log(totalCheck);
+        // if (event.target.password.value.length <= totalCheck) {
+        //     console.log('char gaada')
+        // }
+        // console.log(uppcaseCheck)
+        // console.log(lowcaseCheck)
+        // console.log(numCheck)
+
+
         if (event.target.username.value == '') {
             messageForUsername.style.display = 'flex';
             messageForUsername.innerText = 'Please insert your Username!';
@@ -191,6 +215,10 @@ if (signUpForm) {
                 messageForPassword2.style.display = 'flex';
                 messageForPassword2.innerText = 'Please Insert Your Password Confirm';
             }
+        } else if (uppcaseCheck <= 0 || lowcaseCheck <= 0 || numCheck <= 0 || (event.target.password.value.length <= totalCheck)) {
+            messageForPassword.style.display = 'flex';
+            messageForPassword.innerText = 'Password must be contain Lowercase, Uppercase and Symbol!';
+
         } else if (event.target.password2.value == '') {
             messageForPassword2.style.display = 'flex';
             messageForPassword2.innerText = 'Please Insert Your Password Confirm';
