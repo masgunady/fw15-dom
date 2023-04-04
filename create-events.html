@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="./assets/css/styling.css" />
   </head>
-  <body class="cust-dashboard-handle page-event-modal">
+  <body class="cust-dashboard-handle page-event-modal event-page">
     <nav class="flex justify-between items-center w-[100%] h-24 px-9 lg:px-14">
       <div class="flex justify-start items-center gap-2 lg:gap-3.5">
         <div>
@@ -130,7 +130,10 @@
               <button type="button" id="showModalCreateEvent" class="w-full h-full flex justify-center items-center gap-4 text-xs font-medium tracking-1px text-[#3366FF]"><i data-feather="plus-circle"></i>Create</button>
             </div>
           </div>
-          <div class="flex items-center justify-start gap-6 border-b-2 py-7">
+          <div class="event-list-container h-[700px] overflow-scroll">
+
+          </div>
+          <!-- <div class="flex items-center justify-start gap-6 border-b-2 py-7">
             <div>
               <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
                 <div class="text-sm font-semibold text-[#FF8900]">15</div>
@@ -147,8 +150,30 @@
                 <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="btnDeleteEvent">Delete</button></div>
               </div>
             </div>
-          </div>
-          <div class="flex items-center justify-start gap-6 border-b-2 py-7">
+          </div> -->
+
+
+          <!-- <div class="flex items-center justify-start gap-6 border-b-2 py-7">
+            <div>
+              <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
+                <div class="text-sm font-semibold text-[#FF8900]">15</div>
+                <div class="text-xs font-medium text-[#C1C5D0]">Wed</div>
+              </div>
+            </div>
+            <div class="flex flex-col items-start justify-start text-[#373A42] gap-[5px]">
+              <div class="text-2xl font-semibold tracking-[2px] mb-3.5">Sights & Sounds Exhibition</div>
+              <div class="text-xs tracking-[0.5px]">Jakarta, Indonesia</div>
+              <div class="text-xs tracking-[0.5px]">Wed, 15 Nov, 4:00 PM</div>
+              <div class="flex items-center gap-5">
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Detail</button></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Update</button></div>
+                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Delete</button></div>
+              </div>
+            </div>
+          </div> -->
+
+
+          <!-- <div class="flex items-center justify-start gap-6 border-b-2 py-7">
             <div>
               <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
                 <div class="text-sm font-semibold text-[#FF8900]">15</div>
@@ -183,25 +208,7 @@
                 <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Delete</button></div>
               </div>
             </div>
-          </div>
-          <div class="flex items-center justify-start gap-6 border-b-2 py-7">
-            <div>
-              <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
-                <div class="text-sm font-semibold text-[#FF8900]">15</div>
-                <div class="text-xs font-medium text-[#C1C5D0]">Wed</div>
-              </div>
-            </div>
-            <div class="flex flex-col items-start justify-start text-[#373A42] gap-[5px]">
-              <div class="text-2xl font-semibold tracking-[2px] mb-3.5">Sights & Sounds Exhibition</div>
-              <div class="text-xs tracking-[0.5px]">Jakarta, Indonesia</div>
-              <div class="text-xs tracking-[0.5px]">Wed, 15 Nov, 4:00 PM</div>
-              <div class="flex items-center gap-5">
-                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Detail</button></div>
-                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Update</button></div>
-                <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Delete</button></div>
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </main>
@@ -511,5 +518,6 @@
       feather.replace();
     </script>
     <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/list.js"></script>
   </body>
 </html>

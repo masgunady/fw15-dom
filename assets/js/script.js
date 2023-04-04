@@ -2,6 +2,9 @@ import {
     dataEvent
 } from './list.js';
 
+
+const createEventPath = window.location.pathname == '/create-events.html';
+
 const contIconEye = document.querySelector('.cust-container-icon-eye');
 const contIconEye2 = document.querySelector('.cust-container-icon-eye2');
 const usernameInput = document.querySelector('.cust-username-input');
@@ -292,7 +295,6 @@ if (indexPage) {
 }
 
 
-
 // index event content
 if (indexPage) {
     const eventContainer = document.querySelector('.event-banner-container');
@@ -425,34 +427,64 @@ if (pageWithModal) {
         }
     })
 
-    btnDetailEvent.addEventListener('click', function () {
-        if (detailEventModal.style.display == 'none') {
-            detailEventModal.style.display = 'flex'
-        } else {
-            detailEventModal.style.display = 'none'
-        }
-    })
+    // btnDetailEvent.addEventListener('click', function () {
+    //     if (detailEventModal.style.display == 'none') {
+    //         detailEventModal.style.display = 'flex'
+    //     } else {
+    //         detailEventModal.style.display = 'none'
+    //     }
+    // })
 
-    detailEventModal.addEventListener('click', event => {
-        const isClickInside = containerDetailEventModal.contains(event.target)
-        if (!isClickInside) {
-            detailEventModal.style.display = 'none';
-        }
-    })
+    // detailEventModal.addEventListener('click', event => {
+    //     const isClickInside = containerDetailEventModal.contains(event.target)
+    //     if (!isClickInside) {
+    //         detailEventModal.style.display = 'none';
+    //     }
+    // })
 
-    btnUpdatelEvent.addEventListener('click', function () {
-        if (updateEventModal.style.display == 'none') {
-            updateEventModal.style.display = 'flex'
-        } else {
-            updateEventModal.style.display = 'none'
-        }
-    })
+    // btnUpdatelEvent.addEventListener('click', function () {
+    //     if (updateEventModal.style.display == 'none') {
+    //         updateEventModal.style.display = 'flex'
+    //     } else {
+    //         updateEventModal.style.display = 'none'
+    //     }
+    // })
 
-    updateEventModal.addEventListener('click', event => {
-        const isClickInside = containerUpdateEventModal.contains(event.target)
-        if (!isClickInside) {
-            updateEventModal.style.display = 'none';
-        }
-    })
+    // updateEventModal.addEventListener('click', event => {
+    //     const isClickInside = containerUpdateEventModal.contains(event.target)
+    //     if (!isClickInside) {
+    //         updateEventModal.style.display = 'none';
+    //     }
+    // })
 
+}
+
+if (createEventPath) {
+    const eventListContainer = document.querySelector('.event-list-container');
+    const data = dataEvent;
+
+    let html = '';
+
+    data.forEach((event) => {
+        html += `<div class="flex items-center justify-start gap-6 border-b-2 py-7">
+        <div>
+          <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
+            <div class="text-sm font-semibold text-[#FF8900]">15</div>
+            <div class="text-xs font-medium text-[#C1C5D0]">Wed</div>
+          </div>
+        </div>
+        <div class="flex flex-col items-start justify-start text-[#373A42] gap-[5px]">
+          <div class="text-2xl font-semibold tracking-[2px] mb-3.5">${event.event_name}</div>
+          <div class="text-xs tracking-[0.5px]">${event.event_location}</div>
+          <div class="text-xs tracking-[0.5px]">${event.event_date}</div>
+          <div class="flex items-center gap-5">
+            <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Detail</button></div>
+            <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Update</button></div>
+            <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Delete</button></div>
+          </div>
+        </div>
+      </div>
+        `;
+        eventListContainer.innerHTML = html;
+    })
 }
