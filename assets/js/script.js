@@ -460,31 +460,64 @@ if (pageWithModal) {
 }
 
 if (createEventPath) {
-    const eventListContainer = document.querySelector('.event-list-container');
-    const data = dataEvent;
-
-    let html = '';
-
-    data.forEach((event) => {
-        html += `<div class="flex items-center justify-start gap-6 border-b-2 py-7">
-        <div>
-          <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
-            <div class="text-sm font-semibold text-[#FF8900]">15</div>
-            <div class="text-xs font-medium text-[#C1C5D0]">Wed</div>
+    const itemsPerPage = 4; 
+    let currentPage = 1; 
+    function renderPage(page) {
+  
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const data = dataEvent.slice(startIndex, endIndex);
+        const eventListContainer = document.querySelector('.event-list-container');
+    
+        let html = '';
+      
+        // Render the items for the current page
+        data.map(event => {
+          html += `<div class="flex items-center justify-start gap-6 border-b-2 py-7">
+          <div>
+            <div class="w-[50px] h-[75px] flex flex-col items-center justify-center rounded-2xl bg-white shadow-lg">
+              <div class="text-sm font-semibold text-[#FF8900]">15</div>
+              <div class="text-xs font-medium text-[#C1C5D0]">Wed</div>
+            </div>
+          </div>
+          <div class="flex flex-col items-start justify-start text-[#373A42] gap-[5px]">
+            <div class="text-2xl font-semibold tracking-[2px] mb-3.5">${event.event_name}</div>
+            <div class="text-xs tracking-[0.5px]">${event.event_location}</div>
+            <div class="text-xs tracking-[0.5px]">${event.event_date}</div>
+            <div class="flex items-center gap-5">
+              <div class="text-xs traacking-[0.5px] text-[#3366FF]"><a href="./event-detail.html?id=${event.id}">Detail</a></div>
+              <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Update</button></div>
+              <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Delete</button></div>
+            </div>
           </div>
         </div>
-        <div class="flex flex-col items-start justify-start text-[#373A42] gap-[5px]">
-          <div class="text-2xl font-semibold tracking-[2px] mb-3.5">${event.event_name}</div>
-          <div class="text-xs tracking-[0.5px]">${event.event_location}</div>
-          <div class="text-xs tracking-[0.5px]">${event.event_date}</div>
-          <div class="flex items-center gap-5">
-            <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Detail</button></div>
-            <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Update</button></div>
-            <div class="text-xs traacking-[0.5px] text-[#3366FF]"><button id="">Delete</button></div>
-          </div>
-        </div>
-      </div>
-        `;
-        eventListContainer.innerHTML = html;
-    })
+          `;
+          eventListContainer.innerHTML = html;
+        });
+      }
+      
+      const totalPages = Math.ceil(dataEvent.length / itemsPerPage);
+      function navigateToPage(page) {
+        currentPage = page;
+        renderPage(currentPage);
+      }
+      function createPaginationButtons(totalPages) {
+        const paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = '';
+      
+        for (let page = 1; page <= totalPages; page++) {
+          const button = document.createElement('button');
+          button.style.width = "30px"
+          button.style.background = "#EAF1FF"
+          button.style.color = "#000000"
+          button.style.borderRadius = "5px"
+          button.textContent = page;
+          button.addEventListener('click', () => {
+            navigateToPage(page);
+          });
+          paginationContainer.appendChild(button);
+        }
+      }
+      renderPage(currentPage);
+      createPaginationButtons(totalPages);
 }

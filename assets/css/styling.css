@@ -177,7 +177,7 @@ body {
   text-transform: uppercase;
   color: #ff3d71;
 }
-
+gg
 .event-container .title-event-container > p {
   font-weight: 600;
   font-size: 36px;
@@ -251,7 +251,6 @@ body {
   align-items: center;
   gap: 30px;
   object-fit: cover;
-  /* background: #ff3d71; */
   overflow: scroll;
   overflow-y: hidden;
 }
